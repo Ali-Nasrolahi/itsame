@@ -1,29 +1,17 @@
 name: hugo
 
 services:
-    build:
+    main:
         image: klakegg/hugo:ext-alpine
-        user: 1000:1000
-        volumes:
-            - .:/src:z
-    server:
-        image: klakegg/hugo:ext-alpine
-        user: 1000:1000
-        command: server -D
+        command: server -D --disableFastRender
         volumes:
             - .:/src:z
         ports:
             - 1313:1313
-    shell:
-        image: klakegg/hugo:ext-alpine
-        user: 1000:1000
-        command: shell
-        volumes:
-            - .:/src:z
     nginx:
         image: nginx
         volumes:
             - ./public:/usr/share/nginx/html:z
         ports:
-            - 80:80
+            - 8080:80
 
