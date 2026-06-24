@@ -15,7 +15,7 @@ title = "it's-a me"
   # copyright = "Copy, _right?_ :thinking_face:"
 
 [params.author]
-  name = "Ali Nasrolahi"
+  name = "Ali Nasrollahi"
   image = "img/profile.png"
   headline = "Hi, What's up? :wave:"
   bio = "I do some C stuff :)"
